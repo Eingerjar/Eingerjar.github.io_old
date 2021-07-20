@@ -21,4 +21,12 @@ git checkout # 원하는 branch로 이동
 git merge # 합칠 branch(ex.master)에서 합쳐질 branch를 입력함
 {% endhighlight %}
 
---3way branch
+분기된 branch는 merge를 통해 다시 합쳐질 수 있다.
+합쳐질때는 3way merge라는 방법을 사용하는 데
+
+<img src="https://media.giphy.com/media/cFkiFMDg3iFoI/giphy.gif" alt="git merge.gif">
+
+두개의 커밋의 공통 조상을 사용하여 merge를 실행한다.
+
+공통된 조상과 비교하며 한쪽에서만 바뀐 경우는 바로 반영하고
+공통된 내용을 두 커밋이 둘다 수정하였으면 충돌을 발생 시킨다.
