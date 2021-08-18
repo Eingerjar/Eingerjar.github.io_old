@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-08-18T23:14:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog</title><subtitle>An amazing website.</subtitle><author><name>Eingerjar</name><email>cksrb1526@naver.com</email></author><entry><title type="html">Git Branch</title><link href="http://localhost:4000/til/TIL-git_v2-post/" rel="alternate" type="text/html" title="Git Branch" /><published>2021-07-12T15:17:20+09:00</published><updated>2021-07-12T15:17:20+09:00</updated><id>http://localhost:4000/til/TIL-git_v2-post</id><content type="html" xml:base="http://localhost:4000/til/TIL-git_v2-post/">&lt;h2&gt;Git Branch&lt;/h2&gt;
+&lt;p&gt;원본 버전은 유지한 상태에서 다른 기능을 추가하고 싶을 때 branch를 사용한다.
+branch는 뜻 그대로 가지를 생각하면 이해하기가 싶다. 동료와 협업이나 다른 기능을 넣을 때 branch를 이용해 분기한다.&lt;/p&gt;
+
+&lt;h3&gt;사용법&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;branch&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 뒤에 원하는 branch이름을 작성하면 branch가 현재 HEAD에 생성됨&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;checkout&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 원하는 branch로 이동&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3&gt;merge&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;merge&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 합칠 branch(ex.master)에서 합쳐질 branch를 입력함&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;분기된 branch는 merge를 통해 다시 합쳐질 수 있다.
+합쳐질때는 3way merge라는 방법을 사용하는 데&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/cFkiFMDg3iFoI/giphy.gif&quot; alt=&quot;git merge.gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;두개의 커밋의 공통 조상을 사용하여 merge를 실행한다.&lt;/p&gt;
+
+&lt;p&gt;공통된 조상과 비교하며 한쪽에서만 바뀐 경우는 바로 반영하고
+공통된 내용을 두 커밋이 둘다 수정하였으면 충돌을 발생 시킨다.&lt;/p&gt;</content><author><name>Eingerjar</name><email>cksrb1526@naver.com</email></author><category term="TIL" /><summary type="html">Git Branch 원본 버전은 유지한 상태에서 다른 기능을 추가하고 싶을 때 branch를 사용한다. branch는 뜻 그대로 가지를 생각하면 이해하기가 싶다. 동료와 협업이나 다른 기능을 넣을 때 branch를 이용해 분기한다.</summary></entry><entry><title type="html">Git</title><link href="http://localhost:4000/til/TIL-post/" rel="alternate" type="text/html" title="Git" /><published>2021-07-08T17:56:00+09:00</published><updated>2021-07-08T17:56:00+09:00</updated><id>http://localhost:4000/til/TIL-post</id><content type="html" xml:base="http://localhost:4000/til/TIL-post/">&lt;h2&gt;Git이란 무엇인가?&lt;/h2&gt;
+
+&lt;p&gt;사람들은 소프트웨어 개발을 하는 과정에서 버전관리의 필요성을 느끼게 된다.
+여러 버전관리 시스템이 생겨났지만
+리누스 토발즈가 기존에 있던 기존 버전 관리 시스템으로 리눅스 개발을 하다가
+문제가 많이 생겨서 화가 많이 나셔서…
+2주만에 만들어버렸다는 바로 git이다.&lt;/p&gt;
+
+&lt;p&gt;git은
+&lt;img src=&quot;https://res.cloudinary.com/practicaldev/image/fetch/s--Si7ksd-d--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/800/1%2AdiRLm1S5hkVoh5qeArND0Q.png&quot; alt=&quot;git struct&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위와 같은 구조로 내부적으로 관리가 된다. 간단하게 설명하면 working directory에서 버전을 추적하고 싶은
+파일을 staging area에 add시킨다. local repository에 commite과 함께 message를 적어주면 버전이 기록된다.&lt;/p&gt;
+
+&lt;h3&gt;Working Directory&lt;/h3&gt;
+&lt;p&gt;git으로 작업 폴더를 말한다. git을 초기화한 작업 디렉토리이다.(.git 폴더가 있는 폴더)&lt;/p&gt;
+
+&lt;h3&gt;Staging Area&lt;/h3&gt;
+&lt;p&gt;git이 기록할 파일을 두는 장소. add를 통해 기록할 파일 working directory에서 추가 할 수 있다.&lt;/p&gt;
+
+&lt;h3&gt;Local Repository&lt;/h3&gt;
+&lt;p&gt;commite을 통해 파일들의 버전이 기록되는 저장소.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 로컬 저장소 초기화&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# staging area에 추가&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commit&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# local repository에 추가&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;diff&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 기존 버전과 현재 파일들의 다른 부분 표시&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# commit한 log를 확인&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;checkout&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commitID&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 해당 커밋으로 버전을 바꿈&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;option&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commitID&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 해당 commitID 전 버전을 삭제 후 해당버전으로 checkout&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;revert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commitID&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 해당 commitID까지 되돌리기 (commitlog에 message가 남는다.)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Eingerjar</name><email>cksrb1526@naver.com</email></author><category term="TIL" /><summary type="html">Git이란 무엇인가?</summary></entry><entry><title type="html">첫번째 블로그 포스트!</title><link href="http://localhost:4000/hacking/hack-post/" rel="alternate" type="text/html" title="첫번째 블로그 포스트!" /><published>2019-03-30T15:56:00+09:00</published><updated>2019-03-30T15:56:00+09:00</updated><id>http://localhost:4000/hacking/hack-post</id><content type="html" xml:base="http://localhost:4000/hacking/hack-post/">&lt;p&gt;웹 해킹 첫번째 포스트&lt;/p&gt;</content><author><name>Eingerjar</name><email>cksrb1526@naver.com</email></author><category term="hacking" /><summary type="html">웹 해킹 첫번째 포스트</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/first-post/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2019-03-16T13:24:28+09:00</published><updated>2019-03-16T13:24:28+09:00</updated><id>http://localhost:4000/jekyll/update/first-post</id><content type="html" xml:base="http://localhost:4000/jekyll/update/first-post/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;p&gt;​&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python
+def print_hi(name):
+  print(&quot;hello&quot;, name)
+print_hi('Tom')
+​&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Eingerjar</name><email>cksrb1526@naver.com</email></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
