@@ -2,6 +2,7 @@
 title: "Git Branch"
 date: 2021-07-12 15:17:20 +0900
 categories: TIL
+permalink: /TIL/
 ---
 
 <h2>Git Branch</h2>
